@@ -14,7 +14,7 @@ import UIKit
 }
 
 public class BWSwipeRevealCell: BWSwipeCell {
-    
+    ˇ
     public var backViewbackgroundColor: UIColor = UIColor(white: 0.92, alpha: 1)
     private var _backView: UIView?
     public var backView: UIView? {
