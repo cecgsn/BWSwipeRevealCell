@@ -4,7 +4,7 @@
 //
 //  Created by Kyle Newsome on 2015-10-20.
 //  Copyright © 2015 Kyle Newsome. All rights reserved.
-//
+///
 
 import Foundation
 import UIKit
