@@ -16,7 +16,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(MasterViewController.insertNewObject(_:)))
         self.navigationItem.rightBarButtonItem = addButton
     }
     
@@ -79,7 +79,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         swipeCell.bgViewRightImage = UIImage(named:"Delete")!.imageWithRenderingMode(.AlwaysTemplate)
         swipeCell.bgViewRightColor = UIColor.redColor()
         
-        let type = BWSwipeCellType(rawValue: object.valueForKey("type") as! Int)!
+        let type = BWSwipeCellType(rawValue: object.valueForKeyPath("type") as! Int)!
         swipeCell.type = type
         
         switch type {
