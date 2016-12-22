@@ -30,11 +30,11 @@ public enum BWSwipeCellState {
 }
 
 @objc public protocol BWSwipeCellDelegate: NSObjectProtocol {
-    optional func swipeCellDidStartSwiping(cell: BWSwipeCell)
-    optional func swipeCellDidSwipe(cell: BWSwipeCell)
-    optional func swipeCellWillRelease(cell: BWSwipeCell)
-    optional func swipeCellDidCompleteRelease(cell: BWSwipeCell)
-    optional func swipeCellDidChangeState(cell: BWSwipeCell)
+    @objc optional func swipeCellDidStartSwiping(cell: BWSwipeCell)
+    @objc optional func swipeCellDidSwipe(cell: BWSwipeCell)
+    @objc optional func swipeCellWillRelease(cell: BWSwipeCell)
+    @objc optional func swipeCellDidCompleteRelease(cell: BWSwipeCell)
+    @objc optional func swipeCellDidChangeState(cell: BWSwipeCell)
 }
 
 public class BWSwipeCell:UITableViewCell {

@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 @objc public protocol BWSwipeRevealCellDelegate:BWSwipeCellDelegate {
-    optional func swipeCellActivatedAction(cell: BWSwipeCell, isActionLeft: Bool)
+    @objc optional func swipeCellActivatedAction(cell: BWSwipeCell, isActionLeft: Bool)
 }
 
 public class BWSwipeRevealCell: BWSwipeCell {
-    ˇ
+    
     public var backViewbackgroundColor: UIColor = UIColor(white: 0.92, alpha: 1)
     private var _backView: UIView?
     public var backView: UIView? {
