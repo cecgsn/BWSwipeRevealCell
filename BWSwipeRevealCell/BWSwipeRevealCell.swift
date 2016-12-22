@@ -36,7 +36,7 @@ public class BWSwipeRevealCell: BWSwipeCell {
     private var _leftBackButton: UIButton?
     public var leftBackButton:UIButton? {
         if _leftBackButton == nil {
-            _leftBackButton = UIButton(frame: CGRectMake(0, 0, CGRectGetHeight(self.frame), CGRectGetHeight(self.frame)))
+            _leftBackButton = UIButton(frame: CGRectMake(0, 0, CGRectGetHeight(self.backView!.frame), CGRectGetHeight(self.backView!.frame)))
             _leftBackButton!.setImage(self.bgViewLeftImage, forState: .Normal)
             _leftBackButton!.addTarget(self, action: #selector(BWSwipeRevealCell.leftButtonTapped), forControlEvents: .TouchUpInside)
             _leftBackButton!.tintColor = UIColor.whiteColor()
@@ -49,7 +49,7 @@ public class BWSwipeRevealCell: BWSwipeCell {
     private var _rightBackButton: UIButton?
     public var rightBackButton:UIButton? {
         if _rightBackButton == nil {
-            _rightBackButton = UIButton(frame: CGRectMake(CGRectGetMaxX(self.contentView.frame), 0, CGRectGetHeight(self.frame), CGRectGetHeight(self.frame)))
+            _rightBackButton = UIButton(frame: CGRectMake(CGRectGetMaxX(self.backView!.frame), 0, CGRectGetHeight(self.backView!.frame), CGRectGetHeight(self.backView!.frame)))
             _rightBackButton!.setImage(self.bgViewRightImage, forState: .Normal)
             _rightBackButton!.addTarget(self, action: #selector(BWSwipeRevealCell.rightButtonTapped), forControlEvents: .TouchUpInside)
             _rightBackButton!.tintColor = UIColor.whiteColor()
