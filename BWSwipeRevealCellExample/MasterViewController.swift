@@ -79,7 +79,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         swipeCell.bgViewRightImage = UIImage(named:"Delete")!.imageWithRenderingMode(.AlwaysTemplate)
         swipeCell.bgViewRightColor = UIColor.redColor()
         
-        let type = BWSwipeCellType(rawValue: object.valueForKeyPath("type") as! Int)!
+        let type = BWSwipeCellType(rawValue: object.valueForKey("type") as! Int)
         swipeCell.type = type
         
         switch type {
